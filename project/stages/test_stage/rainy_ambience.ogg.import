@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rainy_ambience.ogg-47f50c87f1bc17736efef2238f3c2dea.oggstr"
+
+[deps]
+
+source_file="res://stages/test_stage/rainy_ambience.ogg"
+dest_files=[ "res://.import/rainy_ambience.ogg-47f50c87f1bc17736efef2238f3c2dea.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

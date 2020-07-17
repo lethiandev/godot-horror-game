@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://shaders/simple_psx.shader" type="Shader" id=1]
+[ext_resource path="res://props/country_theme/brick_wall/brick_wall_albedo.png" type="Texture" id=2]
+
+
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/albedo_texture = ExtResource( 2 )
