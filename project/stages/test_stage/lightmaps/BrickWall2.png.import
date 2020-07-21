@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/BrickWall2.png-4f6cef9f576bffb3ab071994b8e85bac.s3tc.stex"
-path.etc="res://.import/BrickWall2.png-4f6cef9f576bffb3ab071994b8e85bac.etc.stex"
+path="res://.import/BrickWall2.png-4f6cef9f576bffb3ab071994b8e85bac.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://stages/test_stage/lightmaps/BrickWall2.png"
-dest_files=[ "res://.import/BrickWall2.png-4f6cef9f576bffb3ab071994b8e85bac.s3tc.stex", "res://.import/BrickWall2.png-4f6cef9f576bffb3ab071994b8e85bac.etc.stex" ]
+dest_files=[ "res://.import/BrickWall2.png-4f6cef9f576bffb3ab071994b8e85bac.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

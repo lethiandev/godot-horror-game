@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/BeerBottle4.png-231e30a27131cb0cb4e226931e721750.s3tc.stex"
-path.etc="res://.import/BeerBottle4.png-231e30a27131cb0cb4e226931e721750.etc.stex"
+path="res://.import/BeerBottle4.png-231e30a27131cb0cb4e226931e721750.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://stages/test_stage/lightmaps/BeerBottle4.png"
-dest_files=[ "res://.import/BeerBottle4.png-231e30a27131cb0cb4e226931e721750.s3tc.stex", "res://.import/BeerBottle4.png-231e30a27131cb0cb4e226931e721750.etc.stex" ]
+dest_files=[ "res://.import/BeerBottle4.png-231e30a27131cb0cb4e226931e721750.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
