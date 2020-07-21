@@ -26,8 +26,9 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.77
 current = true
 
 [node name="SpotLight" type="SpotLight" parent="Yaw/Camera"]
-transform = Transform( 0.999945, 0, 0.0104543, 0, 1, 0, -0.0104543, 0, 0.999945, 0.0682008, 0.0357023, -0.0566603 )
+transform = Transform( 0.999945, 0, 0.0104543, 0, 1, 0, -0.0104543, 0, 0.999945, 0.121776, 0.0357023, -0.0566603 )
 shadow_enabled = true
+shadow_bias = 0.1
 spot_range = 7.12813
 spot_angle = 26.8762
 
