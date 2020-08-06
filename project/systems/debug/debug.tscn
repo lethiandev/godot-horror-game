@@ -1,6 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://singletons/debug_layer/debug_layer.gd" type="Script" id=1]
+[ext_resource path="res://systems/debug/debug.gd" type="Script" id=1]
+
+
+
+
 
 [node name="DebugLayer" type="CanvasLayer"]
 script = ExtResource( 1 )
