@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://shaders/simple_psx.shader" type="Shader" id=1]
+[ext_resource path="res://characters/base_human/base_human.tscn" type="PackedScene" id=2]
+[ext_resource path="res://props/metrics/grid_128.png" type="Texture" id=3]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 1 )
+shader_param/roughness = 1.0
+shader_param/metallic = 0.0
+shader_param/specular = 0.0
+shader_param/albedo_texture = ExtResource( 3 )
+
+[node name="TestCharacter" type="Node"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.487311, -0.265708, 0.831822, 0, 0.952582, 0.304282, -0.873228, 0.14828, -0.464204, 1.4735, 0.608702, -0.875508 )
+
+[node name="BaseHuman" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0140928, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.951727, 0 )
+cast_shadow = 0
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.866025, -0.400361, -0.299519, -5.23695e-08, -0.599037, 0.800721, -0.5, -0.693445, -0.518782, 0, 3, 0 )
+shadow_enabled = true
+shadow_bias = 0.05
