@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/base_human.png-182b3a6d427c75303c19d511fb6e7f7e.stex"
+path="res://.import/base_human_albedo.png-5bb4dcbba1e28c70faf9e0bd3fa67bd3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/base_human/model_data/base_human.png"
-dest_files=[ "res://.import/base_human.png-182b3a6d427c75303c19d511fb6e7f7e.stex" ]
+source_file="res://characters/base_human/model_data/base_human_albedo.png"
+dest_files=[ "res://.import/base_human_albedo.png-5bb4dcbba1e28c70faf9e0bd3fa67bd3.stex" ]
 
 [params]
 
