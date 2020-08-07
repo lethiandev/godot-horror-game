@@ -4,17 +4,17 @@
 [ext_resource path="res://characters/base_human/base_human.tscn" type="PackedScene" id=2]
 [ext_resource path="res://props/metrics/grid_128.png" type="Texture" id=3]
 
-[sub_resource type="Environment" id=3]
+[sub_resource type="Environment" id=1]
 background_mode = 1
 background_color = Color( 0.145098, 0.34902, 0.286275, 1 )
 ambient_light_color = Color( 0.219608, 0.219608, 0.219608, 1 )
 
-[sub_resource type="PlaneMesh" id=1]
+[sub_resource type="PlaneMesh" id=2]
 size = Vector2( 4, 4 )
 subdivide_width = 3
 subdivide_depth = 3
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 1 )
 shader_param/roughness = 1.0
 shader_param/metallic = 0.0
@@ -24,7 +24,7 @@ shader_param/albedo_texture = ExtResource( 3 )
 [node name="TestCharacter" type="Node"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 3 )
+environment = SubResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.866025, -0.400361, -0.299519, -5.23695e-08, -0.599037, 0.800721, -0.5, -0.693445, -0.518781, 0, 3, 0 )
@@ -39,8 +39,8 @@ transform = Transform( -0.487311, -0.265708, 0.831822, 0, 0.952582, 0.304282, -0
 [node name="Floor" type="MeshInstance" parent="TestArea"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.951727, 0 )
 cast_shadow = 0
-mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
 
 [node name="BaseHuman" parent="TestArea" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0140928, 0 )
