@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/player/player.gd" type="Script" id=1]
-[ext_resource path="res://characters/player/player_skin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/player/model_data/player_skin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/player/boom_arm.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 margin = 0.01
 radius = 0.3
-height = 1.2
+height = 1.36
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -15,31 +16,18 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="RayCast" type="RayCast" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0 )
+[node name="PlayerSkin" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+
+[node name="Yaw" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 )
+
+[node name="BoomArm" type="RayCast" parent="Yaw"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0 )
 enabled = true
+cast_to = Vector3( 0.12, 0.05, 1.4 )
+script = ExtResource( 3 )
 
-[node name="Yaw" type="Position3D" parent="."]
-
-[node name="Camera" type="Camera" parent="Yaw"]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.77537, 0 )
+[node name="Camera" type="Camera" parent="Yaw/BoomArm"]
+transform = Transform( 1, 0, 0, 0, 0.998983, 0.045084, 0, -0.045084, 0.998983, 0.18, 0.05, 1.4 )
 current = true
-
-[node name="SpotLight" type="SpotLight" parent="Yaw/Camera"]
-transform = Transform( 0.999945, 0, 0.0104543, 0, 1, 0, -0.0104543, 0, 0.999945, 0.121776, 0.0357023, -0.0566603 )
-shadow_enabled = true
-shadow_bias = 0.1
-spot_range = 7.12813
-spot_angle = 26.8762
-
-[node name="PlayerSkin" parent="Yaw" instance=ExtResource( 2 )]
-transform = Transform( 0.072, 0, 0, 0, 0.072, 0, 0, 0, 0.072, 0, 0, -0.174107 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 50.0
-margin_bottom = 24.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
