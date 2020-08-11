@@ -10,5 +10,14 @@ func _input(event):
 func _handle_mouse_motion(p_event: InputEventMouseMotion):
 	var motion = p_event.relative * 0.008
 	
-	$Yaw.rotate_y(-motion.x)
-	$Yaw/BoomArm.rotate_x(-motion.y)
+	_rotate_camera_y(-motion.x)
+	_rotate_camera_x(-motion.y)
+
+func _rotate_camera_y(p_angle: float) -> void:
+	$CameraYaw.rotate_y(p_angle)
+
+func _rotate_camera_x(p_angle: float) -> void:
+	var current_angle = $CameraYaw/BoomArm.rotation.x
+	var next_angle = clamp(current_angle + p_angle, -PI * 0.35, PI * 0.35)
+	
+	$CameraYaw/BoomArm.rotation.x = next_angle

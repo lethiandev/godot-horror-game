@@ -19,15 +19,14 @@ shape = SubResource( 1 )
 [node name="PlayerSkin" parent="." instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
 
-[node name="Yaw" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 )
+[node name="CameraYaw" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0 )
 
-[node name="BoomArm" type="RayCast" parent="Yaw"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0 )
+[node name="BoomArm" type="RayCast" parent="CameraYaw"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, 0, 0 )
 enabled = true
-cast_to = Vector3( 0.12, 0.05, 1.4 )
+cast_to = Vector3( 0.12, 0.2, 1.4 )
 script = ExtResource( 3 )
 
-[node name="Camera" type="Camera" parent="Yaw/BoomArm"]
-transform = Transform( 1, 0, 0, 0, 0.998983, 0.045084, 0, -0.045084, 0.998983, 0.18, 0.05, 1.4 )
+[node name="Camera" type="Camera" parent="CameraYaw/BoomArm"]
 current = true
