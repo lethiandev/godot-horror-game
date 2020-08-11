@@ -12,6 +12,9 @@ func _handle_mouse_motion(p_event: InputEventMouseMotion):
 	
 	_rotate_camera_y(-motion.x)
 	_rotate_camera_x(-motion.y)
+	
+	var camera_xform = $CameraYaw/BoomArm/Camera.global_transform
+	$PlayerSkin.look_target = -camera_xform.basis.z
 
 func _rotate_camera_y(p_angle: float) -> void:
 	$CameraYaw.rotate_y(p_angle)
